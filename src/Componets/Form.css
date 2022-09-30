@@ -1,0 +1,65 @@
+.form-body {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 20px;
+}
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+  text-align: right;
+  height: 70px;
+  display: flex;
+  z-index: 1;
+  align-items: center;
+  justify-content: flex-end;
+}
+.foot-button {
+  margin-right: 24px;
+  width: 15%;
+  height: 55%;
+  background-color: saddlebrown;
+
+  color: white;
+  font-size: 18px;
+}
+.foot-button:hover {
+  cursor: pointer;
+}
+.top-prev-button {
+  margin-right: 24px;
+  width: 15%;
+  height: 55%;
+}
+.css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input.css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input.css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* .MuiMenuItem-root {
+  
+} */
+
+/* @media screen and (max-width: 600px) {
+  .css-kk1bwy-MuiButtonBase-root-MuiMenuItem-root.Mui-selected {
+    justify-content: space-between;
+  }
+} */
+.progressbar {
+  height: 40px;
+
+  margin-top: 50px;
+}
+.form-container {
+  display: flex;
+  flex-direction: column;
+}
+.head {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.prev-butn:hover {
+  cursor: pointer;
+}

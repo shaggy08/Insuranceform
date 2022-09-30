@@ -1,0 +1,14 @@
+.step4-cont {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 15px;
+  padding: 20px;
+  width: 60%;
+}
+.row {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+}

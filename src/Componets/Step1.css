@@ -1,0 +1,35 @@
+.step1-cont {
+  width: 60%;
+}
+.plan-selection {
+  background-color: white;
+  border-radius: 15px;
+  padding: 20px;
+}
+.details {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+  background-color: white;
+  margin-top: 20px;
+  border-radius: 15px;
+  padding: 20px;
+}
+.plan-option {
+  display: flex;
+  justify-content: space-between;
+}
+.error {
+  color: red;
+}
+.css-kk1bwy-MuiButtonBase-root-MuiMenuItem-root {
+  justify-content: space-between;
+}
+.MuiButtonBase-root-MuiMenuItem-root {
+  justify-content: space-between;
+}
+@media screen and (max-width: 600px) {
+  .css-kk1bwy-MuiButtonBase-root-MuiMenuItem-root.Mui-selected {
+    justify-content: space-between;
+  }
+}
