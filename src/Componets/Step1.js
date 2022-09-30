@@ -100,7 +100,7 @@ function Step1({ formdata, setformdata, Formerror }) {
               id="outlined-required"
               value={formdata.mobile}
               onChange={handleMobile}
-              placeholder="Enter mobile number"
+              placeholder="Enter 10 digit mobile number"
             />
             <p className="error">{Formerror.mobile}</p>
           </div>
@@ -133,7 +133,7 @@ function Step1({ formdata, setformdata, Formerror }) {
               id="outlined-required"
               value={formdata.pincode}
               onChange={handlepincode}
-              placeholder="Enter pincode"
+              placeholder="Enter 6 digit pincode"
             />
             <p className="error">{Formerror.pincode}</p>
           </div>

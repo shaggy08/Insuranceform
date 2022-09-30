@@ -23,10 +23,10 @@ function Form() {
   const [formdata, setformdata] = useState({
     plan: "",
     email: "",
-    mobile: 0,
+    mobile: "",
     addressLine01: "",
     addressLine02: "",
-    pincode: 0,
+    pincode: "",
     state: "",
     deduction: 0,
     dl1: false,
@@ -34,11 +34,10 @@ function Form() {
     dl3: false,
     dl4: false,
   });
+  console.log(formdata);
   const validate = () => {
-    console.log("valide");
     setisvalid(false);
     setFormerror(() => handleVlidation(formdata));
-    console.log(isvalid);
     // if (Object.keys(Formerror).length == 0 && isvalid) {
     //   setpage((currPage) => currPage + 1);
     // }
@@ -46,7 +45,10 @@ function Form() {
   const handleVlidation = (formdata) => {
     const error = {};
     console.log("validete called");
+    const hasNumber = /\d/;
+    const format = /^[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]*$/;
     const regex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/i;
+    const isnum = /^\d+$/;
     if (page == 0) {
       if (!formdata.plan) {
         error.plan = "Please select a plan";
@@ -58,18 +60,28 @@ function Form() {
       }
       if (formdata.mobile.length !== 10) {
         error.mobile = "Please provide 10 digit mobile number";
+      } else if (!isnum.test(formdata.mobile)) {
+        error.mobile = "Please enter a valid 10 digit mobile number";
       }
       if (!formdata.addressLine01) {
         error.addressLine01 = "Please enter address";
+      } else if (formdata.addressLine01.length > 80) {
+        error.addressLine01 = "adrress should be less than 80 characters";
       }
       if (!formdata.addressLine02) {
         error.addressLine02 = "Please enter address";
+      } else if (formdata.addressLine02.length > 80) {
+        error.addressLine02 = "adrress should be less than 80 characters";
       }
       if (formdata.pincode.length !== 6) {
         error.pincode = "Please enter 6 digit pincode";
+      } else if (!isnum.test(formdata.pincode)) {
+        error.pincode = "Please enter a valid 6 digit pincode";
       }
       if (!formdata.state) {
         error.state = "Please enter state";
+      } else if (hasNumber.test(formdata.state)) {
+        error.state = "state can not have number";
       }
     }
     if (page == 1 && formdata.deduction == 0) {
