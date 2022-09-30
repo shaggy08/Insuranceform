@@ -166,7 +166,7 @@ function Form() {
             )}
           </div>
           <div className="head">
-            <h1>{isSubmited ? "Congrations!!" : FormTitle[page]}</h1>
+            <h1>{isSubmited ? "Congratulations!!" : FormTitle[page]}</h1>
           </div>
         </div>
         <div className="form-body">{PageDisplay()}</div>

@@ -58,6 +58,7 @@
 .head {
   display: flex;
   justify-content: center;
+  width: 60%;
   align-items: center;
 }
 .prev-butn:hover {
