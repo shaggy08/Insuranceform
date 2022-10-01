@@ -24,20 +24,20 @@ function Step2({ formdata, setformdata, Formerror }) {
     },
   ];
   function valuetext(value) {
-    console.log(formdata.deduction);
-    return `${value}°C`;
+    return `${value}`;
   }
-  const handlechange = (event) => {
-    setformdata({ ...formdata, deduction: event.target.value });
+  const handlechange = (event, key) => {
+    setformdata({ ...formdata, [key]: event.target.value });
   };
-  const handlecheck = (event) => {
-    setformdata({ ...formdata, deductioncheck: event.target.checked });
+  const handlecheck = (event, key) => {
+    setformdata({ ...formdata, [key]: event.target.checked });
   };
   return (
     <div className="step2-maincont">
       <div className="step2-cont">
         <div className="s2-detial">
           <p className="s2plan">{formdata.plan}</p>
+
           <div className="s2name">
             <Avatar src="/broken-image.jpg" className="s2avtar" />
             <p>Sahil Malik</p>
@@ -60,7 +60,7 @@ function Step2({ formdata, setformdata, Formerror }) {
             defaultValue={2}
             getAriaValueText={valuetext}
             value={formdata.deduction}
-            onChange={handlechange}
+            onChange={(event) => handlechange(event, "deduction")}
             step={1}
             valueLabelDisplay="auto"
             marks={marks}
@@ -84,7 +84,7 @@ function Step2({ formdata, setformdata, Formerror }) {
       <div className="s2declration">
         <Checkbox
           checked={formdata.deductioncheck}
-          onChange={handlecheck}
+          onChange={(event) => handlecheck(event, "deductioncheck")}
           inputProps={{ "aria-label": "controlled" }}
         />
         <p>

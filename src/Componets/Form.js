@@ -3,7 +3,6 @@ import Step1 from "./Step1";
 import Step2 from "./Step2";
 import Step3 from "./Step3";
 import Step4 from "./Step4";
-import LinearProgress from "@mui/material/LinearProgress";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 
 import "./Form.css";
@@ -27,7 +26,6 @@ function Form() {
     addressLine01: "",
     addressLine02: "",
     pincode: "",
-    state: "",
     deduction: 0,
     deductioncheck: false,
     dl1: false,
@@ -35,17 +33,14 @@ function Form() {
     dl3: false,
     dl4: false,
   });
-  console.log(formdata);
+
   const validate = () => {
     setisvalid(false);
     setFormerror(() => handleVlidation(formdata));
-    // if (Object.keys(Formerror).length == 0 && isvalid) {
-    //   setpage((currPage) => currPage + 1);
-    // }
   };
   const handleVlidation = (formdata) => {
     const error = {};
-    console.log("validete called");
+
     const hasNumber = /\d/;
     const format = /^[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]*$/;
     const regex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/i;
@@ -103,19 +98,10 @@ function Form() {
 
     return error;
   };
-  const handlepage = () => {
-    if (Object.keys(Formerror).length == 0 && isvalid) {
-      setpage((currPage) => currPage + 1);
-    }
-  };
+
   const handlesubmit = () => {
-    // console.log("insubmites");
-    // FormTitle.pop();
-    // console.log(FormTitle);
-    // FormTitle.push("Congrations!");
     setisSubmited(true);
   };
-  console.log(page);
 
   useEffect(() => {
     if (Object.keys(Formerror).length == 0 && isvalid) {
@@ -148,20 +134,13 @@ function Form() {
         />
       );
     } else {
-      return (
-        <Step4
-          formdata={formdata}
-          setformdata={setformdata}
-          Formerror={Formerror}
-        />
-      );
+      return <Step4 formdata={formdata} />;
     }
   };
 
   return (
     <div className="form">
       <div className="progressbar">
-        {/* <LinearProgress variant="determinate" value={(page + 1) * 25} /> */}
         <div className="pbar">
           <div className="step active"></div>
           <div className={page > 0 ? "step active" : "step"}></div>
@@ -229,41 +208,34 @@ function Form() {
           </div>
         )}
       </div>
-
-      <div className="footer">
-        {/* <button
-            className="foot-button"
-            disabled={page == 0}
-            onClick={() => {
-              setpage((currPage) => currPage - 1);
-            }}
-          >
-            {" "}
-            Prev
-          </button> */}
-        {page == FormTitle.length - 1 ? (
-          <button
-            className="foot-button"
-            onClick={() => {
-              handlesubmit();
-            }}
-          >
-            {" "}
-            submit
-          </button>
-        ) : (
-          <button
-            className="foot-button"
-            disabled={page == FormTitle.length - 1}
-            onClick={() => {
-              validate();
-            }}
-          >
-            {" "}
-            Next
-          </button>
-        )}
-      </div>
+      {isSubmited ? (
+        <></>
+      ) : (
+        <div className="footer">
+          {page == FormTitle.length - 1 ? (
+            <button
+              className="foot-button"
+              onClick={() => {
+                handlesubmit();
+              }}
+            >
+              {" "}
+              submit
+            </button>
+          ) : (
+            <button
+              className="foot-button"
+              disabled={page == FormTitle.length - 1}
+              onClick={() => {
+                validate();
+              }}
+            >
+              {" "}
+              Next
+            </button>
+          )}
+        </div>
+      )}
     </div>
   );
 }

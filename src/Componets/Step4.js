@@ -1,49 +1,44 @@
 import React from "react";
 import "./Step4.css";
 
+const reviewDetails = [
+  {
+    label: "plan",
+    value: "Plan selected",
+  },
+  {
+    label: "mobile",
+    value: "Mobile number",
+  },
+  {
+    label: "addressLine01",
+    value: "Address",
+  },
+  {
+    label: "pincode",
+    value: "Pincode",
+  },
+  {
+    label: "pincode",
+    value: "State",
+  },
+];
+
 function Step4({ formdata }) {
   return (
     <div className="step4-cont">
-      <div className="row">
-        <div className="left">
-          <p className="rLeft">Plan selected</p>
-        </div>
-        <div className="right">
-          <span className="rRight">{formdata.plan}</span>
-        </div>
-      </div>
-      <div className="row">
-        <div className="left">
-          <p className="rLeft">Mobile number</p>
-        </div>
-        <div className="right">
-          <span className="rRight">{formdata.mobile}</span>
-        </div>
-      </div>
-      <div className="row">
-        <div className="left">
-          <p className="rLeft">Address</p>
-        </div>
-        <div className="right">
-          <span className="rRight">{formdata.addressLine01}</span>
-        </div>
-      </div>
-      <div className="row">
-        <div className="left">
-          <p className="rLeft">Pincode</p>
-        </div>
-        <div className="right">
-          <span className="rRight">{formdata.pincode}</span>
-        </div>
-      </div>
-      <div className="row">
-        <div className="left">
-          <p className="rLeft">State</p>
-        </div>
-        <div className="right">
-          <span className="rRight">{formdata.state}</span>
-        </div>
-      </div>
+      {reviewDetails.map((review) => {
+        return (
+          <div className="row">
+            <div className="left">
+              <p className="rLeft">{review.value}</p>
+            </div>
+            <div className="right">
+              <span className="rRight">{formdata[review.label]}</span>
+            </div>
+          </div>
+        );
+      })}
     </div>
   );
 }

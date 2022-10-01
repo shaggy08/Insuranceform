@@ -30,24 +30,9 @@ function Step1({ formdata, setformdata, Formerror }) {
   const handleChange = (event) => {
     setformdata({ ...formdata, plan: event.target.value });
   };
-  const handleEmail = (event, key) => {
+  const handledetail = (event, key) => {
     setformdata({ ...formdata, [key]: event.target.value });
   };
-  //   const handleMobile = (event) => {
-  //     setformdata({ ...formdata, mobile: event.target.value });
-  //   };
-  //   const handleaddressLine01 = (event) => {
-  //     setformdata({ ...formdata, addressLine01: event.target.value });
-  //   };
-  //   const handleaddressLine02 = (event) => {
-  //     setformdata({ ...formdata, addressLine02: event.target.value });
-  //   };
-  //   const handlepincode = (event) => {
-  //     setformdata({ ...formdata, pincode: event.target.value });
-  //   };
-  //   const handlestate = (event) => {
-  //     setformdata({ ...formdata, state: event.target.value });
-  //   };
 
   return (
     <div className="step1-cont">
@@ -102,7 +87,7 @@ function Step1({ formdata, setformdata, Formerror }) {
               required
               id="outlined-required"
               value={formdata.email}
-              onChange={(event) => handleEmail(event, "email")}
+              onChange={(event) => handledetail(event, "email")}
               placeholder="Enter email"
             />
             <p className="error">{Formerror.email}</p>
@@ -114,7 +99,7 @@ function Step1({ formdata, setformdata, Formerror }) {
               required
               id="outlined-required"
               value={formdata.mobile}
-              onChange={(event) => handleEmail(event, "mobile")}
+              onChange={(event) => handledetail(event, "mobile")}
               placeholder="Enter 10 digit mobile number"
             />
             <p className="error">{Formerror.mobile}</p>
@@ -125,7 +110,7 @@ function Step1({ formdata, setformdata, Formerror }) {
               required
               id="outlined-required"
               value={formdata.addressLine01}
-              onChange={(event) => handleEmail(event, "addressLine01")}
+              onChange={(event) => handledetail(event, "addressLine01")}
               placeholder="Enter addressLine01"
             />
             <p className="error">{Formerror.addressLine01}</p>
@@ -136,7 +121,7 @@ function Step1({ formdata, setformdata, Formerror }) {
               required
               id="outlined-required"
               value={formdata.addressLine02}
-              onChange={(event) => handleEmail(event, "addressLine02")}
+              onChange={(event) => handledetail(event, "addressLine02")}
               placeholder="Enter addressLine02"
             />
             <p className="error">{Formerror.addressLine02}</p>
@@ -147,7 +132,7 @@ function Step1({ formdata, setformdata, Formerror }) {
               required
               id="outlined-required"
               value={formdata.pincode}
-              onChange={(event) => handleEmail(event, "pincode")}
+              onChange={(event) => handledetail(event, "pincode")}
               placeholder="Enter 6 digit pincode"
             />
             <p className="error">{Formerror.pincode}</p>
@@ -158,7 +143,7 @@ function Step1({ formdata, setformdata, Formerror }) {
               required
               id="outlined-required"
               value={formdata.state}
-              onChange={(event) => handleEmail(event, "state")}
+              onChange={(event) => handledetail(event, "state")}
               placeholder="Enter state"
             />
             <p className="error">{Formerror.state}</p>

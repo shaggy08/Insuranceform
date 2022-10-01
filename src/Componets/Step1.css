@@ -19,9 +19,6 @@
   margin-top: 20px;
   border-radius: 15px;
   padding: 16px;
-
-  /* display: flex;
-  flex-direction: column; */
 }
 .detils-basic {
   font-family: "Inter";
@@ -48,9 +45,6 @@
   color: red;
 }
 
-/* .css-kk1bwy-MuiButtonBase-root-MuiMenuItem-root {
-  justify-content: space-between !important;
-} */
 .font-sm {
   font-family: "Inter";
   font-style: normal;
