@@ -65,8 +65,10 @@ function Step1({ formdata, setformdata, Formerror }) {
             label="Select Plan"
             onChange={handleChange}
             sx={{
-              display: "flex",
-              justifyContent: "space-between",
+              ".MuiSelect-select": {
+                display: "flex",
+                justifyContent: "space-between",
+              },
             }}
           >
             {menuOptions.map((option) => {
