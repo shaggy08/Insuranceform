@@ -1,6 +1,7 @@
 import React from "react";
 import Avatar from "@mui/material/Avatar";
 import Slider from "@mui/material/Slider";
+import Checkbox from "@mui/material/Checkbox";
 import "./Step2.css";
 
 function Step2({ formdata, setformdata, Formerror }) {
@@ -29,41 +30,58 @@ function Step2({ formdata, setformdata, Formerror }) {
   const handlechange = (event) => {
     setformdata({ ...formdata, deduction: event.target.value });
   };
-
+  const handlecheck = (event) => {
+    setformdata({ ...formdata, deductioncheck: event.target.checked });
+  };
   return (
-    <div className="step2-cont">
-      <div className="s2-detial">
-        <h4>{formdata.plan}</h4>
-        <div className="s2name">
-          <Avatar src="/broken-image.jpg" />
-          <p>Sahil Malik</p>
+    <div className="step2-maincont">
+      <div className="step2-cont">
+        <div className="s2-detial">
+          <p className="s2plan">{formdata.plan}</p>
+          <div className="s2name">
+            <Avatar src="/broken-image.jpg" className="s2avtar" />
+            <p>Sahil Malik</p>
+          </div>
         </div>
+        <hr></hr>
+        <div className="s2-deduction">
+          <p>
+            Sum insured of ₹20,00,000 with a deduction of{" "}
+            <span style={{ fontWeight: "bold" }}>
+              {" "}
+              ₹{formdata.deduction * 100000}{" "}
+            </span>
+          </p>
+        </div>
+        <div className="s2slider">
+          <Slider
+            className="changes"
+            aria-label="Custom marks"
+            defaultValue={2}
+            getAriaValueText={valuetext}
+            value={formdata.deduction}
+            onChange={handlechange}
+            step={1}
+            valueLabelDisplay="auto"
+            marks={marks}
+            min={1}
+            max={5}
+          />
+        </div>
+        <p className="error">{Formerror.deduction}</p>
       </div>
-      <hr></hr>
-      <div className="s2-deduction">
+      <div className="s2declration">
+        <Checkbox
+          checked={formdata.deductioncheck}
+          onChange={handlecheck}
+          inputProps={{ "aria-label": "controlled" }}
+        />
         <p>
-          Sum insured of ₹20,00,000 with a deduction of{" "}
-          <span style={{ fontWeight: "bold" }}>
-            {" "}
-            ₹{formdata.deduction * 100000}{" "}
-          </span>
+          I understand that the insurance will not be utilized until ₹
+          {formdata.deduction * 100000} is exhausted
         </p>
       </div>
-      <div className="s2slider">
-        <Slider
-          aria-label="Custom marks"
-          defaultValue={2}
-          getAriaValueText={valuetext}
-          value={formdata.deduction}
-          onChange={handlechange}
-          step={1}
-          valueLabelDisplay="auto"
-          marks={marks}
-          min={1}
-          max={5}
-        />
-      </div>
-      <p className="error">{Formerror.deduction}</p>
+      <p className="error">{Formerror.deductioncheck}</p>
     </div>
   );
 }

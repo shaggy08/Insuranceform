@@ -32,9 +32,9 @@ function Step1({ formdata, setformdata, Formerror }) {
   return (
     <div className="step1-cont">
       <div className="plan-selection">
-        <h2> Plan detils</h2>
+        <p className="pdetil"> Plan detils</p>
         <hr></hr>
-        <p> your plan type</p>
+        <p className="font-sm"> your plan type</p>
 
         <FormControl fullWidth>
           <InputLabel id="demo-simple-select-label">select Plan</InputLabel>
@@ -48,21 +48,24 @@ function Step1({ formdata, setformdata, Formerror }) {
             <MenuItem className="plan-option" value="self">
               {/* <div className="plan-option"> */}
               <div>
-                <Avatar src="/broken-image.jpg" /> <p> self </p>
+                <Avatar src="/broken-image.jpg" />{" "}
+                <p className="font-sm"> self </p>
               </div>
-              <div className="plan-prize">600</div>
+              <div className="plan-prize ">600</div>
               {/* </div> */}
             </MenuItem>
-            <MenuItem className="plan-option" value="Parent">
+            <MenuItem className="plan-option font-sm" value="Parent">
               <div>
-                <Avatar src="/broken-image.jpg" /> <p> Parent </p>
+                <Avatar src="/broken-image.jpg" />{" "}
+                <p className="font-sm"> Parent </p>
               </div>
               <div className="plan-prize">600</div>
             </MenuItem>
             <MenuItem className="plan-option" value="self + parent">
               {/* <div className="plan-option"> */}
               <div>
-                <Avatar src="/broken-image.jpg" /> <p> self + parent</p>
+                <Avatar src="/broken-image.jpg" />{" "}
+                <p className="font-sm"> self + parent</p>
               </div>
               <div className="plan-prize">600</div>
               {/* </div> */}
@@ -70,7 +73,8 @@ function Step1({ formdata, setformdata, Formerror }) {
             <MenuItem className="plan-option" value="self + parent + kid">
               {/* <div className="plan-option"> */}
               <div>
-                <Avatar src="/broken-image.jpg" /> <p> self + parent + kid </p>
+                <Avatar src="/broken-image.jpg" />{" "}
+                <p className="font-sm"> self + parent + kid </p>
               </div>
               <div className="plan-prize">600</div>
               {/* </div> */}
@@ -80,9 +84,11 @@ function Step1({ formdata, setformdata, Formerror }) {
         <p className="error">{Formerror.plan}</p>
       </div>
       <div className="basicdeatils-cont">
+        <p className="detils-basic"> Basic details</p>
+        <hr></hr>
         <div className="details">
           <div className="email">
-            <p> email</p>
+            <p className="font-sm"> Email</p>
             <TextField
               required
               id="outlined-required"
@@ -94,7 +100,7 @@ function Step1({ formdata, setformdata, Formerror }) {
           </div>
 
           <div className="email">
-            <p> Mobile number </p>
+            <p className="font-sm"> Mobile number </p>
             <TextField
               required
               id="outlined-required"
@@ -105,7 +111,7 @@ function Step1({ formdata, setformdata, Formerror }) {
             <p className="error">{Formerror.mobile}</p>
           </div>
           <div className="email">
-            <p> Adress line 01</p>
+            <p className="font-sm"> Adress line 01</p>
             <TextField
               required
               id="outlined-required"
@@ -116,7 +122,7 @@ function Step1({ formdata, setformdata, Formerror }) {
             <p className="error">{Formerror.addressLine01}</p>
           </div>
           <div className="email">
-            <p> Adress line 02</p>
+            <p className="font-sm"> Adress line 02</p>
             <TextField
               required
               id="outlined-required"
@@ -127,7 +133,7 @@ function Step1({ formdata, setformdata, Formerror }) {
             <p className="error">{Formerror.addressLine02}</p>
           </div>
           <div className="email">
-            <p> Pincode</p>
+            <p className="font-sm"> Pincode</p>
             <TextField
               required
               id="outlined-required"
@@ -138,7 +144,7 @@ function Step1({ formdata, setformdata, Formerror }) {
             <p className="error">{Formerror.pincode}</p>
           </div>
           <div className="email">
-            <p> State</p>
+            <p className="font-sm"> State</p>
             <TextField
               required
               id="outlined-required"

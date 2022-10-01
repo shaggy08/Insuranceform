@@ -1,7 +1,7 @@
 .form-body {
   display: flex;
   justify-content: space-evenly;
-  margin-bottom: 20px;
+  margin-bottom: 90px;
 }
 .footer {
   position: fixed;
@@ -11,18 +11,26 @@
   text-align: right;
   height: 70px;
   display: flex;
-  z-index: 1;
+
   align-items: center;
   justify-content: flex-end;
 }
 .foot-button {
   margin-right: 24px;
-  width: 15%;
-  height: 55%;
-  background-color: saddlebrown;
 
   color: white;
   font-size: 18px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 20px;
+  gap: 8px;
+  width: 320px;
+  height: 47px;
+  background: #e06358;
+  border-radius: 6px;
 }
 .foot-button:hover {
   cursor: pointer;
@@ -36,7 +44,19 @@
   display: flex;
   justify-content: space-between;
 }
+.head-intro {
+  display: flex;
 
+  flex-direction: column;
+  align-items: flex-start;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 140%;
+
+  color: #2d3d54;
+}
 /* .MuiMenuItem-root {
   
 } */
@@ -53,14 +73,85 @@
 }
 .form-container {
   display: flex;
+  margin-right: 20px;
+  /* flex-direction: column; */
+}
+.fomr-cont1 {
+  display: flex;
   flex-direction: column;
+  flex: 1;
+}
+.preview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 12px;
+  width: 352px;
+  height: 275px;
+  background: #ffffff;
+  border-radius: 10px;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+.preview-detail {
+  display: grid;
+  padding-left: 10px;
+  width: 100%;
+  grid-template-columns: repeat(2, 1fr);
 }
 .head {
   display: flex;
   justify-content: center;
   width: 60%;
+  align-items: flex-start;
+  margin-left: 21%;
+  flex-direction: column;
+}
+.prev-butn {
+  display: flex;
   align-items: center;
 }
 .prev-butn:hover {
   cursor: pointer;
+}
+.pbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.step {
+  width: 24%;
+  height: 8px;
+  background-color: #ccc4ba;
+}
+.active {
+  background-color: #e06358;
+}
+.preview-font {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 130%;
+
+  color: #2d3d54;
+}
+.fp-font {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 120%;
+
+  color: #55657d;
+}
+.title-font {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 120%;
+
+  color: #182639;
 }

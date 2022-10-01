@@ -1,47 +1,47 @@
 import React from "react";
 import "./Step4.css";
 
-function Step4({ formdata, setformdata, Formerror }) {
+function Step4({ formdata }) {
   return (
     <div className="step4-cont">
       <div className="row">
         <div className="left">
-          <p>Plan selected</p>
+          <p className="rLeft">Plan selected</p>
         </div>
         <div className="right">
-          <span style={{ fontWeight: "bold" }}>{formdata.plan}</span>
+          <span className="rRight">{formdata.plan}</span>
         </div>
       </div>
       <div className="row">
         <div className="left">
-          <p>Mobile number</p>
+          <p className="rLeft">Mobile number</p>
         </div>
         <div className="right">
-          <span style={{ fontWeight: "bold" }}>{formdata.mobile}</span>
+          <span className="rRight">{formdata.mobile}</span>
         </div>
       </div>
       <div className="row">
         <div className="left">
-          <p>Address</p>
+          <p className="rLeft">Address</p>
         </div>
         <div className="right">
-          <span style={{ fontWeight: "bold" }}>{formdata.addressLine01}</span>
+          <span className="rRight">{formdata.addressLine01}</span>
         </div>
       </div>
       <div className="row">
         <div className="left">
-          <p>Pincode</p>
+          <p className="rLeft">Pincode</p>
         </div>
         <div className="right">
-          <span style={{ fontWeight: "bold" }}>{formdata.pincode}</span>
+          <span className="rRight">{formdata.pincode}</span>
         </div>
       </div>
       <div className="row">
         <div className="left">
-          <p>State</p>
+          <p className="rLeft">State</p>
         </div>
         <div className="right">
-          <span style={{ fontWeight: "bold" }}>{formdata.state}</span>
+          <span className="rRight">{formdata.state}</span>
         </div>
       </div>
     </div>

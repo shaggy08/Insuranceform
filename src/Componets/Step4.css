@@ -12,3 +12,27 @@
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
 }
+.rLeft {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 132%;
+
+  display: flex;
+  align-items: center;
+
+  color: #55657d;
+}
+.rRight {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 140%;
+  /* or 22px */
+
+  /* Gray/800 */
+
+  color: #182639;
+}

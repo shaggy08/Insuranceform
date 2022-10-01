@@ -29,6 +29,7 @@ function Form() {
     pincode: "",
     state: "",
     deduction: 0,
+    deductioncheck: false,
     dl1: false,
     dl2: false,
     dl3: false,
@@ -86,6 +87,9 @@ function Form() {
     }
     if (page == 1 && formdata.deduction == 0) {
       error.deduction = "Please select deduction amount";
+    }
+    if (page == 1 && !formdata.deductioncheck) {
+      error.deductioncheck = "Please declare deduction";
     }
     if (page == 2) {
       if (!formdata.dl1 || !formdata.dl2 || !formdata.dl3 || !formdata.dl4) {
@@ -157,33 +161,77 @@ function Form() {
   return (
     <div className="form">
       <div className="progressbar">
-        <LinearProgress variant="determinate" value={(page + 1) * 25} />
+        {/* <LinearProgress variant="determinate" value={(page + 1) * 25} /> */}
+        <div className="pbar">
+          <div className="step active"></div>
+          <div className={page > 0 ? "step active" : "step"}></div>
+          <div className={page > 1 ? "step active" : "step"}></div>
+          <div className={page > 2 ? "step active" : "step"}></div>
+        </div>
       </div>
       <div className="form-container">
-        <div className="head">
-          <div className="prev-butn">
-            {page == 0 || isSubmited ? (
-              <></>
-            ) : (
-              <ArrowBackIosIcon
-                className="top-prev-button"
-                disabled={page == 0 || isSubmited}
-                onClick={() => {
-                  setpage((currPage) => currPage - 1);
-                }}
-              >
-                {" "}
-                Prev
-              </ArrowBackIosIcon>
-            )}
-          </div>
+        <div className="fomr-cont1">
           <div className="head">
-            <h1>{isSubmited ? "Congratulations!!" : FormTitle[page]}</h1>
+            <div className="prev-butn title-font">
+              {page == 0 || isSubmited ? (
+                <></>
+              ) : (
+                <ArrowBackIosIcon
+                  className="top-prev-button"
+                  disabled={page == 0 || isSubmited}
+                  onClick={() => {
+                    setpage((currPage) => currPage - 1);
+                  }}
+                >
+                  {" "}
+                  Prev
+                </ArrowBackIosIcon>
+              )}
+              <p>{isSubmited ? "Congratulations!!" : FormTitle[page]}</p>
+            </div>
+            <div className="head-intro">
+              {page == 0 ? (
+                <>
+                  <p>
+                    Hello, Sahil <br /> Increase your's and your family heath
+                    insurance cover by
+                    <span style={{ fontWeight: "bold" }}> ₹20 lakhs</span> with
+                    super top up!
+                  </p>
+                </>
+              ) : (
+                <></>
+              )}
+            </div>
           </div>
+          <div className="form-body">{PageDisplay()}</div>
         </div>
-        <div className="form-body">{PageDisplay()}</div>
-        <div className="footer">
-          {/* <button
+        {page == 3 ? (
+          <></>
+        ) : (
+          <div className="preview">
+            <p className="fp-font"> Form preivew</p>
+            <hr></hr>
+            <div className="preview-detail preview-font">
+              <p>Personal Email -</p>
+              <p>{formdata.email}</p>
+              <p>Mobile -</p>
+              <p>{formdata.mobile}</p>
+              <p>Address line 01 -</p>
+              <p>{formdata.addressLine01}</p>
+              <p>Address Line 02 -</p>
+              <p>{formdata.addressLine02}</p>
+              <p>Pincode -</p>
+              <p>{formdata.pincode}</p>
+              <p>State -</p>
+              <p>{formdata.state}</p>
+            </div>
+          </div>
+        )}
+      </div>
+
+      <div className="footer">
+        {/* <button
             className="foot-button"
             disabled={page == 0}
             onClick={() => {
@@ -193,44 +241,28 @@ function Form() {
             {" "}
             Prev
           </button> */}
-          {page == FormTitle.length - 1 ? (
-            <button
-              className="foot-button"
-              onClick={() => {
-                handlesubmit();
-              }}
-            >
-              {" "}
-              submit
-            </button>
-          ) : (
-            <button
-              className="foot-button"
-              disabled={page == FormTitle.length - 1}
-              onClick={() => {
-                validate();
-              }}
-            >
-              {" "}
-              Next
-            </button>
-          )}
-          {/* <button
+        {page == FormTitle.length - 1 ? (
+          <button
+            className="foot-button"
+            onClick={() => {
+              handlesubmit();
+            }}
+          >
+            {" "}
+            submit
+          </button>
+        ) : (
+          <button
             className="foot-button"
             disabled={page == FormTitle.length - 1}
             onClick={() => {
               validate();
-              //   handlepage();
-              //   setpage((currPage) => currPage + 1);
             }}
-            // onClick={() => {
-
-            // }}
           >
             {" "}
             Next
-          </button> */}
-        </div>
+          </button>
+        )}
       </div>
     </div>
   );

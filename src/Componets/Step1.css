@@ -6,14 +6,39 @@
   border-radius: 15px;
   padding: 20px;
 }
+.pdetil {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 130%;
+  color: #182639;
+}
+.basicdeatils-cont {
+  background-color: white;
+  margin-top: 20px;
+  border-radius: 15px;
+  padding: 16px;
+
+  /* display: flex;
+  flex-direction: column; */
+}
+.detils-basic {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 130%;
+
+  color: #182639;
+}
 .details {
   display: grid;
   grid-gap: 20px;
   grid-template-columns: repeat(2, 1fr);
-  background-color: white;
-  margin-top: 20px;
-  border-radius: 15px;
-  padding: 20px;
+
+  padding: 16px;
+  gap: 24px;
 }
 .plan-option {
   display: flex;
@@ -25,11 +50,15 @@
 .css-kk1bwy-MuiButtonBase-root-MuiMenuItem-root {
   justify-content: space-between;
 }
-.MuiButtonBase-root-MuiMenuItem-root {
-  justify-content: space-between;
+
+.css-kk1bwy-MuiButtonBase-root-MuiMenuItem-root {
+  justify-content: space-between !important;
 }
-@media screen and (max-width: 600px) {
-  .css-kk1bwy-MuiButtonBase-root-MuiMenuItem-root.Mui-selected {
-    justify-content: space-between;
-  }
+.font-sm {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 130%;
+  color: #2d3d54;
 }
