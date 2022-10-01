@@ -64,6 +64,10 @@ function Step1({ formdata, setformdata, Formerror }) {
             value={formdata.plan}
             label="Select Plan"
             onChange={handleChange}
+            sx={{
+              display: "flex",
+              justifyContent: "space-between",
+            }}
           >
             {menuOptions.map((option) => {
               return (
