@@ -66,6 +66,17 @@ function Step2({ formdata, setformdata, Formerror }) {
             marks={marks}
             min={1}
             max={5}
+            sx={{
+              ".MuiSlider-thumb": {
+                color: "#d44c46",
+              },
+              ".MuiSlider-rail": {
+                backgroundColor: "#ffde9e",
+              },
+              ".MuiSlider-track": {
+                color: "#d44c46",
+              },
+            }}
           />
         </div>
         <p className="error">{Formerror.deduction}</p>
