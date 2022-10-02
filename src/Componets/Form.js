@@ -180,7 +180,7 @@ function Form() {
                     Hello Sahil,
                     <br /> Increase yours and your family's health insurance
                     cover by
-                    <span style={{ fontWeight: "bold" }}> ₹20 lakhs</span>
+                    <span style={{ fontWeight: "bold" }}> ₹20 lakhs </span>
                     with Super top-up!
                   </p>
                 </>
