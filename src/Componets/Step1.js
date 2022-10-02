@@ -80,7 +80,10 @@ function Step1({ formdata, setformdata, Formerror }) {
         <p className="error">{Formerror.plan}</p>
       </div>
       <div className="basicdeatils-cont">
-        <p className="detils-basic"> Basic details (required)</p>
+        <p className="detils-basic">
+          {" "}
+          Basic details <span style={{ fontWeight: "400" }}> (required) </span>
+        </p>
         <hr></hr>
         <div className="details">
           <div className="email">
