@@ -39,14 +39,18 @@ function Step2({ formdata, setformdata, Formerror }) {
           <p className="s2plan">{formdata.plan}</p>
 
           <div className="s2name">
-            <Avatar src="/broken-image.jpg" className="s2avtar" />
+            <Avatar
+              src="https://i.pinimg.com/736x/89/90/48/899048ab0cc455154006fdb9676964b3.jpg"
+              // src="https://static.vecteezy.com/system/resources/thumbnails/004/607/791/small/man-face-emotive-icon-smiling-male-character-in-blue-shirt-flat-illustration-isolated-on-white-happy-human-psychological-portrait-positive-emotions-user-avatar-for-app-web-design-vector.jpg"
+              className="s2avtar"
+            />
             <p>Sahil Malik</p>
           </div>
         </div>
         <hr></hr>
         <div className="s2-deduction">
           <p>
-            Sum insured of ₹20,00,000 with a deduction of{" "}
+            Sum insured of ₹20,00,000 with a deductible of{" "}
             <span style={{ fontWeight: "bold" }}>
               {" "}
               ₹{formdata.deduction * 100000}{" "}
@@ -88,8 +92,8 @@ function Step2({ formdata, setformdata, Formerror }) {
           inputProps={{ "aria-label": "controlled" }}
         />
         <p>
-          I understand that the insurance will not be utilized until ₹
-          {formdata.deduction * 100000} is exhausted
+          I understand that this insurance will not be utilized until ₹
+          {formdata.deduction * 100000} (deductible) is exhausted.
         </p>
       </div>
       <p className="error">{Formerror.deductioncheck}</p>

@@ -3,6 +3,7 @@ import Step1 from "./Step1";
 import Step2 from "./Step2";
 import Step3 from "./Step3";
 import Step4 from "./Step4";
+import ArrowBackIosNewRoundedIcon from "@mui/icons-material/ArrowBackIosNewRounded";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 
 import "./Form.css";
@@ -155,16 +156,19 @@ function Form() {
               {page == 0 || isSubmited ? (
                 <></>
               ) : (
-                <ArrowBackIosIcon
-                  className="top-prev-button"
-                  disabled={page == 0 || isSubmited}
+                <div
+                  className="prev-arrow"
                   onClick={() => {
                     setpage((currPage) => currPage - 1);
                   }}
                 >
-                  {" "}
-                  Prev
-                </ArrowBackIosIcon>
+                  <div className="svgi">
+                    <ArrowBackIosNewRoundedIcon
+                      className="top-prev-button"
+                      disabled={page == 0 || isSubmited}
+                    ></ArrowBackIosNewRoundedIcon>
+                  </div>
+                </div>
               )}
               <p>{isSubmited ? "Congratulations!!" : FormTitle[page]}</p>
             </div>
@@ -172,10 +176,11 @@ function Form() {
               {page == 0 ? (
                 <>
                   <p>
-                    Hello, Sahil <br /> Increase your's and your family heath
-                    insurance cover by
+                    Hello Sahil,
+                    <br /> Increase yours and your family's health insurance
+                    cover by
                     <span style={{ fontWeight: "bold" }}> ₹20 lakhs</span> with
-                    super top up!
+                    with Super top-up!
                   </p>
                 </>
               ) : (
@@ -189,20 +194,20 @@ function Form() {
           <></>
         ) : (
           <div className="preview">
-            <p className="fp-font"> Form preivew</p>
+            <p className="fp-font"> Form preview</p>
             <hr></hr>
             <div className="preview-detail preview-font">
-              <p>Personal Email -</p>
+              <p>Personal email address</p>
               <p>{formdata.email}</p>
-              <p>Mobile -</p>
+              <p>Mobile number</p>
               <p>{formdata.mobile}</p>
-              <p>Address line 01 -</p>
+              <p>Address line 01</p>
               <p>{formdata.addressLine01}</p>
-              <p>Address Line 02 -</p>
+              <p>Address line 02</p>
               <p>{formdata.addressLine02}</p>
-              <p>Pincode -</p>
+              <p>Pincode</p>
               <p>{formdata.pincode}</p>
-              <p>State -</p>
+              <p>State</p>
               <p>{formdata.state}</p>
             </div>
           </div>
@@ -220,7 +225,7 @@ function Form() {
               }}
             >
               {" "}
-              submit
+              Submit
             </button>
           ) : (
             <button

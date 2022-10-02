@@ -2,6 +2,7 @@
   display: flex;
   justify-content: space-evenly;
   margin-bottom: 90px;
+  padding-top: 24px;
 }
 .footer {
   position: fixed;
@@ -17,10 +18,7 @@
 }
 .foot-button {
   margin-right: 24px;
-
   color: white;
-  font-size: 18px;
-
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -31,6 +29,12 @@
   height: 47px;
   background: #e06358;
   border-radius: 6px;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 130%;
 }
 .foot-button:hover {
   cursor: pointer;
@@ -84,6 +88,7 @@
 .preview-detail {
   display: grid;
   padding-left: 10px;
+  gap: 8px;
   width: 100%;
   grid-template-columns: repeat(2, 1fr);
 }
@@ -108,7 +113,7 @@
   justify-content: space-between;
 }
 .step {
-  width: 24%;
+  width: 24.5%;
   height: 8px;
   background-color: #ccc4ba;
 }
@@ -141,4 +146,18 @@
   line-height: 120%;
 
   color: #182639;
+}
+.prev-arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 64px;
+  width: 64px;
+  border-radius: 100%;
+  background: #ece9e5;
+  margin-right: 24px;
+}
+.top-prev-button {
+  margin: 0;
+  padding: 0;
 }

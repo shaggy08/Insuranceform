@@ -6,21 +6,21 @@ const declrations = [
   {
     label: "dl1",
     value:
-      "I hereby decalre that none of the propsed member are habitual consumer of alcohol, tobacco, gukta or any recreational drug.",
+      "I hereby declare that none of the proposed members are habitual consumers of alcohol, tobacco, gutka or any recreational drugs.",
   },
   {
     label: "dl2",
     value:
-      "I hereby declare that all members are in good heath and entilrely free from any mental pf physical impairements or deformited, disease/contion.",
+      "I hereby declare that all proposed members are in good health and entirely free from any mental pf physical impairements or deformities, disease/condition.",
   },
   {
     label: "dl3",
     value:
-      "I hereby declare that all members are in good heath and entilrely free from any mental pf physical impairements or deformited, disease/contion.",
+      "I have understood that there is 30 days waiting period for all diseases and 2 years on named ailments. (list of named ailements)",
   },
   {
     label: "dl4",
-    value: "I understand that this policy doesn't cover Pre-existung diseases.",
+    value: "I understand that this policy doesn't cover Pre-existing diseases.",
   },
 ];
 
