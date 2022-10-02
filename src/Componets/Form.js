@@ -27,6 +27,7 @@ function Form() {
     addressLine01: "",
     addressLine02: "",
     pincode: "",
+    state: "",
     deduction: 0,
     deductioncheck: false,
     dl1: false,
@@ -179,7 +180,7 @@ function Form() {
                     Hello Sahil,
                     <br /> Increase yours and your family's health insurance
                     cover by
-                    <span style={{ fontWeight: "bold" }}> ₹20 lakhs</span> with
+                    <span style={{ fontWeight: "bold" }}> ₹20 lakhs</span>
                     with Super top-up!
                   </p>
                 </>

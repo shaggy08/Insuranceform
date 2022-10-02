@@ -67,7 +67,7 @@ function Step1({ formdata, setformdata, Formerror }) {
                     justifyContent: "space-between",
                   }}
                 >
-                  <div>
+                  <div className="avt-dt">
                     <Avatar src="https://i.pinimg.com/736x/89/90/48/899048ab0cc455154006fdb9676964b3.jpg" />{" "}
                     <p className="font-sm">{option.label} </p>
                   </div>

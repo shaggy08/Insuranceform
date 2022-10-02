@@ -66,7 +66,6 @@ function Step2({ formdata, setformdata, Formerror }) {
             value={formdata.deduction}
             onChange={(event) => handlechange(event, "deduction")}
             step={1}
-            valueLabelDisplay="auto"
             marks={marks}
             min={1}
             max={5}

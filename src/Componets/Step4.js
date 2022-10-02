@@ -19,7 +19,7 @@ const reviewDetails = [
     value: "Pincode",
   },
   {
-    label: "pincode",
+    label: "state",
     value: "State",
   },
 ];

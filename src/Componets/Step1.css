@@ -53,3 +53,7 @@
   line-height: 130%;
   color: #2d3d54;
 }
+.avt-dt {
+  display: flex;
+  align-items: center;
+}

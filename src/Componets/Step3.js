@@ -11,7 +11,7 @@ const declrations = [
   {
     label: "dl2",
     value:
-      "I hereby declare that all proposed members are in good health and entirely free from any mental pf physical impairements or deformities, disease/condition.",
+      "I hereby declare that all proposed members are in good health and entirely free from any mental or physical impairments or deformities, disease/condition.",
   },
   {
     label: "dl3",
